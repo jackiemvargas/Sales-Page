@@ -1,0 +1,53 @@
+# Sales-Page
+<!DOCTYPE html>
+<html>
+<!--This is my work.-->
+
+<body bgcolor="#a5c1e5">
+<br>
+<br>
+<header>
+	<h1>Cowboy Boots Forsale!</h1>
+</header>
+<a href="file:///C:/Users/jacki/OneDrive/Desktop/Trevecca%20Spring%2022/Week%2011/Week%207_9%20Images/RegistrationForm.html">Registration</a><br>
+
+<p> <b>Howdy</b> Looking for some new boot? Scroll down to check out our options! </p>
+<img src="C:\Users\jacki\OneDrive\Desktop\Trevecca Spring 22\Week 11\Activity5_JVargas\bootsale/WesternLife.jpg"/> alt="Photo of a cowboy on horse"/>
+<p>Representing the western style and show casing all of the classic toe shapes!<br/>
+<br>
+<h4>Popular Brands:</h4>
+<a href="http://justinboots.com" target="_blank">Justin Boots</a> <input type="radio" name="boot" value="Justin Boots" checked/><br>
+<a href="http://sheplers.com" target="_blank">Sheplers</a> <input type="radio" name="boot" value="Carhartt"/><br>
+<a href="http://codyjames.us" target="_blank">Cody James</a><input type="radio" name="boot" value="Cody James" checked/><br>
+<a href="http://shyanne.com" target="_blank">Shyanne</a><input type="radio" name="boot" value="Shyanne"/><br>
+Others: <select name="Brands">
+<option>Ariat</option>
+<option>Corral</option>
+<option>Lucchese</option>
+<option>Tecovas</option>
+<option>Tony Lama</option>
+<option>other</option>
+</select>
+<h4>Category:</h4>
+<i><a href="https://www.bootbarn.com/sale/clearance/?prefn1=ref-silhouette&prefv1=Boot" target="_blank">Sale</a><input type="checkbox" name="Sale/Clearance"/><br>
+<a href="https://www.bootbarn.com/search?q=western%20boots" target="_blank">All Boots</a><input type="checkbox" name="New"/></i><br>
+<h4>Toe Shape:</h4>
+<img src="C:\Users\jacki\OneDrive\Desktop\Trevecca Spring 22\Week 11\Activity5_JVargas\bootsale/toeshape.png"/> alt="Photo of boot toe shapes"/>
+<br>
+Pointed <input type="radio" name="shape" value="Pointed" checked/>
+Rounded <input type="radio" name="shape" value="Rounded"/>
+Squared <input type="radio" name="shape" value="Squared" checked/>
+Broad Square <input type="radio" name"shape" value="Broad Square"/>
+
+<h4><input type="submit" value="Click to Submit" /></h4>
+<h4><input type="reset" value="Cancel" /></h4>
+</form>
+
+<br>
+<br>
+<footer>
+<h5>Designed by Jackie Vargas &#9830; March 30</h5>
+</footer>
+
+</body>
+</html>
