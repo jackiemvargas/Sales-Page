@@ -1,0 +1,67 @@
+ Package part1;
+ import java.io.*;
+ import java.util.Scanner;
+ public class PsalmsSearcher {
+    public static void main(String[] args) throws IOException {
+  String fileName = "bible-psalms.txt"; // Path to the file
+  BufferedReader reader = new BufferedReader(new FileReader(fileName));
+  Scanner scanner = new Scanner(System.in);
+  System.out.print("What Book of Psalms chapter? ");
+  int chapter = scanner.nextInt();
+  System.out.print("What Book of Psalms verse within the chapter? ");
+  int verse = scanner.nextInt();
+  String line;
+  boolean verseFound = false;
+  while ((line = reader.readLine()) != null) {
+      if (getReference(line).equals("Psalms " + chapter + ":" + verse)) {
+ System.out.println(getVerse(line));
+ verseFound = true;
+ break;
+      }
+  }
+  if (!verseFound) {
+      System.out.println("The specified chapter and verse do not exist.");
+  }
+  reader.close();
+    }
+    /**
+     *
+ Extracts and returns the reference from a line.
+     *
+     *
+ @param line The line from which to extract the reference.
+ @return The reference.
+     */
+    static String getReference(String line) {
+  return line.split("\t")[0];
+    }
+    /**
+     *
+ Extracts and returns the verse from a line.
+     *
+     *
+ @param line The line from which to extract the verse.
+ @return The verse.
+     */
+    static String getVerse(String line) {
+  return line.split("\t")[1];
+    }
+}
+ package part1;
+ import org.junit.jupiter.api.Test;
+ import static org.junit.jupiter.api.Assertions.*;
+ class PsalmsSearcherTest {
+    @Test
+    void testGetReference() {
+  String testLine = "Psalms 1:1\tBlessed is the man...";
+  String expected = "Psalms 1:1";
+  String actual = PsalmsSearcher.getReference(testLine);
+  assertEquals(expected, actual, "getReference method failed");
+    }
+    @Test
+    void testGetVerse() {
+  String testLine = "Psalms 1:1\tBlessed is the man...";
+  String expected = "Blessed is the man...";
+  String actual = PsalmsSearcher.getVerse(testLine);
+  assertEquals(expected, actual, "getVerse method failed");
+  
